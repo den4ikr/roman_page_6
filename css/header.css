@@ -1,0 +1,158 @@
+.header{
+
+}
+
+body{
+
+}
+
+.header__row{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.header__block{}
+
+.header__logo{}
+
+.header__block ul{}
+
+.header__block ul li{
+	padding-top: 5px;
+	position: relative;
+}
+
+.header__block ul li:before{
+	content: "";
+	background: url(../icon/coin.png) 0 0 / 100% no-repeat;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: -13px;
+
+}
+.header__block ul li:first-child:before{
+	content: "";
+	background: url(../icon/user-icon.png) 0 0 / 100% no-repeat;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: -13px;
+}
+.header__block ul li:last-child:before{
+	content: "";
+	background: url(../icon/shopping-cart-black-shape.png) 0 0 / 100% no-repeat;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: -13px;
+}
+
+
+.hedaer__menu{
+	height: 34px;
+	background-color: #505050;
+}
+
+.header__list{}
+
+.header__list ul{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 34px;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.header__list ul li a{
+	display: block; 
+	margin-right: 40px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+
+.header__list ul li a:hover{
+	color: #A7DA4F;
+}
+
+.header__burger{
+	display: none;
+}
+
+
+
+
+
+
+
+
+@media(max-width: 1024px) {
+	.header__list{
+		padding-left: 10px;
+	}
+}
+
+@media(max-width: 768px) {
+	.header__list{
+		position: absolute;
+		top: -100%;
+		transition: all 1s ease 0s;
+	}
+	.header__list.active{
+		top: 30%;
+	}
+	.header__list ul{
+		display: block;
+	}
+	.header__list ul li a{
+		margin-bottom: 20px;
+		color: #000;
+	}
+	.header__burger{
+		display: block;
+		padding-top: 5px;
+		padding-left: 10px;
+	}
+	.header__logo{
+		padding-left: 10px;
+	}
+	.header__block ul{
+		padding-right: 10px;
+	}
+}
+@media(max-width: 442px) {
+	.hedaer__menu{
+		margin-top: 90px;
+	}
+	.header__list{
+		position: absolute;
+		top: -100%;
+	}
+	.header__list.active{
+		top: 39%;
+	}
+	.header__row{
+		display: block;
+	}
+	.header__block ul{
+		padding-left: 20px;
+	}
+}
+@media(max-width: 323px) {
+	.header__list.active{
+		top: 43%;
+	}
+}
